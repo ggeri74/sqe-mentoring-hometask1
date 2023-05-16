@@ -1,0 +1,15 @@
+{
+  "name": "sqe-mentoring-hometask1",
+  "version": "1.0.0",
+  "description": "Create a basic UI test automation framework using a technology chosen by you in the specific language for the https://www.epam.com/ website!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.12.0"
+  }
+}
