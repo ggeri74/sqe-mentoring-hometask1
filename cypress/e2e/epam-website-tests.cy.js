@@ -1,6 +1,6 @@
 import HomePage from "../pages/HomePage";
-import HeaderComponent from "../components/common/HeaderComponent";
 import SearchResultPage from "../pages/SearchResultPage";
+import HeaderComponent from "../components/common/HeaderComponent";
 
 describe("EPAM Website Tests", () => {
 
