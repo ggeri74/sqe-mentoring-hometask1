@@ -4,6 +4,9 @@ Create a basic UI test automation framework using a technology chosen by you in 
 How to install:
 
 git clone git@github.com:ggeri74/sqe-mentoring-hometask1.git
+
 cd sqe-mentoring-hometask1/
+
 npm install --save-dev  cypress
+
 npx cypress open
