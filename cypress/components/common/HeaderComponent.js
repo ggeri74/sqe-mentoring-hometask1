@@ -12,9 +12,9 @@ class HeaderComponent {
     getSearchField() {
         return cy.get("#new_form_search");
     }
-    
+
     fillSearchField(searchValue) {
-        this.getSearchField().type(searchValue);
+        this.getSearchField().type(searchValue, { delay: 0 });
     }
 
     submitSearch() {
