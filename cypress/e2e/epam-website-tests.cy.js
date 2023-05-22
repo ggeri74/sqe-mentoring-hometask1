@@ -3,6 +3,8 @@ import SearchResultPage from "../pages/SearchResultPage";
 
 describe("EPAM Website Tests", () => {
 
+    let headerComponent;
+
     beforeEach(() => {
         cy.visit("https://www.epam.com/");
     });
@@ -13,23 +15,22 @@ describe("EPAM Website Tests", () => {
     });
 
     it("Validates that the EPAM logo exists in the header", () => {
-        const headerComponent = new HomePage().headerComponent;
+        headerComponent = new HomePage().headerComponent;
         headerComponent.getEpamLogos().should('be.visible');
     });
 
     it("Validates that the search result counter line contains the searched string", () => {
-        const headerComponent = new HomePage().headerComponent;
+        headerComponent = new HomePage().headerComponent;
         const searchValue = "AUTOMATION";
 
         headerComponent.clickOnSearchButton();
         headerComponent.fillSearchField(searchValue);
-        cy.wait(200);
         headerComponent.getSearchField().should("have.value", searchValue);
         headerComponent.submitSearch();
 
         const searchResultPage = new SearchResultPage();
         searchResultPage.getSearchResultCounterLine()
             .invoke("text")
-            .should("contain", `results for "${searchValue}"`);
+            .should("contain", "results for \"" + searchValue + "\"");
     });
 })
