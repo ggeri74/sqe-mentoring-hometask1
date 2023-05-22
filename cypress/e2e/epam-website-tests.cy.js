@@ -24,6 +24,7 @@ describe("EPAM Website Tests", () => {
         const searchValue = "AUTOMATION";
 
         headerComponent.clickOnSearchButton();
+        headerComponent.getSearchField().should('be.visible');
         headerComponent.fillSearchField(searchValue);
         headerComponent.getSearchField().should("have.value", searchValue);
         headerComponent.submitSearch();

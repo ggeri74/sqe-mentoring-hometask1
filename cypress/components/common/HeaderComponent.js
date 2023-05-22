@@ -5,8 +5,7 @@ class HeaderComponent {
     }
 
     clickOnSearchButton() {
-        const button = cy.get(".header-search__button");
-        button.click();
+        cy.get(".header-search__button").click()
     }
 
     getSearchField() {
@@ -18,8 +17,7 @@ class HeaderComponent {
     }
 
     submitSearch() {
-        const button = cy.get(".header-search__submit");
-        button.click();
+        cy.get(".header-search__submit").click();;
     }
 
     getSearchResultCounterLine() {
