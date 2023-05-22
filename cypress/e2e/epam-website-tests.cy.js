@@ -7,15 +7,15 @@ describe("EPAM Website Tests", () => {
         cy.visit("https://www.epam.com/");
     });
 
-    // it("Validates the title of the EPAM home page", () => {
-    //     const homePage = new HomePage();
-    //     homePage.getTitle().should("eq", "EPAM | Software Engineering & Product Development Services");
-    // });
+    it("Validates the title of the EPAM home page", () => {
+        const homePage = new HomePage();
+        homePage.getTitle().should("eq", "EPAM | Software Engineering & Product Development Services");
+    });
 
-    // it("Validates that the EPAM logo exists in the header", () => {
-    //     const headerComponent = new HomePage().headerComponent;
-    //     headerComponent.getEpamLogos().should('be.visible');
-    // });
+    it("Validates that the EPAM logo exists in the header", () => {
+        const headerComponent = new HomePage().headerComponent;
+        headerComponent.getEpamLogos().should('be.visible');
+    });
 
     it("Validates that the search result counter line contains the searched string", () => {
         const headerComponent = new HomePage().headerComponent;
@@ -23,6 +23,7 @@ describe("EPAM Website Tests", () => {
 
         headerComponent.clickOnSearchButton();
         headerComponent.fillSearchField(searchValue);
+        cy.wait(200);
         headerComponent.getSearchField().should("have.value", searchValue);
         headerComponent.submitSearch();
 
